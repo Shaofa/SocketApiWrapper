@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/1.daytimetcp_svr,.dir/daytimetcp_svr.c.o CMakeFiles/1.daytimetcp_svr,.dir/home/lsf/SocketApiWrapper/src/wrapper/sockapi_wrapper.c.o  -o bin/1.daytimetcp_svr, -rdynamic 

@@ -1,0 +1,2 @@
+/home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles/client.dir
+/home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles/server.dir
