@@ -32,6 +32,5 @@ int main(int argn, char* argv[]){
         _close(sock_client);
     }
 
-
     return 0;
 }
