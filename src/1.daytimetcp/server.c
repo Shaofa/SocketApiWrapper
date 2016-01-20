@@ -1,4 +1,4 @@
-#include "sockapi_wrapper.h"
+#include "sockapi.h"
 #include <time.h>
 
 int main(int argn, char* argv[]){

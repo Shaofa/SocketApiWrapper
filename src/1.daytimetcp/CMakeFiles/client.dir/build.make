@@ -72,39 +72,39 @@ CMakeFiles/client.dir/client.c.o.provides: CMakeFiles/client.dir/client.c.o.requ
 
 CMakeFiles/client.dir/client.c.o.provides.build: CMakeFiles/client.dir/client.c.o
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o: /home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o: /home/lsf/SocketApiWrapper/src/common/sockapi.c
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o   -c /home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o   -c /home/lsf/SocketApiWrapper/src/common/sockapi.c
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c > CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -E /home/lsf/SocketApiWrapper/src/common/sockapi.c > CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.i
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c -o CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -S /home/lsf/SocketApiWrapper/src/common/sockapi.c -o CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.s
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.requires:
-.PHONY : CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.requires
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.requires:
+.PHONY : CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.requires
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.provides: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.requires
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.provides.build
-.PHONY : CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.provides
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.provides: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.provides.build
+.PHONY : CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.provides
 
-CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.provides.build: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
+CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.provides.build: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o
 
 # Object files for target client
 client_OBJECTS = \
 "CMakeFiles/client.dir/client.c.o" \
-"CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o"
+"CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 bin/client: CMakeFiles/client.dir/client.c.o
-bin/client: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
+bin/client: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o
 bin/client: CMakeFiles/client.dir/build.make
 bin/client: CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking C executable bin/client"
@@ -115,7 +115,7 @@ CMakeFiles/client.dir/build: bin/client
 .PHONY : CMakeFiles/client.dir/build
 
 CMakeFiles/client.dir/requires: CMakeFiles/client.dir/client.c.o.requires
-CMakeFiles/client.dir/requires: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o.requires
 .PHONY : CMakeFiles/client.dir/requires
 
 CMakeFiles/client.dir/clean:

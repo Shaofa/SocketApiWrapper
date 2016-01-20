@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lsf/SocketApiWrapper/src/common/sockapi.c
+sockapi.h
+/home/lsf/SocketApiWrapper/src/common/sockapi.h
+
+/home/lsf/SocketApiWrapper/src/common/sockapi.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+errno.h
+-
+unistd.h
+-
+

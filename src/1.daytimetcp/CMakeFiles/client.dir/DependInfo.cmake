@@ -5,7 +5,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_C
   "/home/lsf/SocketApiWrapper/src/1.daytimetcp/client.c" "/home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles/client.dir/client.c.o"
-  "/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c" "/home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o"
+  "/home/lsf/SocketApiWrapper/src/common/sockapi.c" "/home/lsf/SocketApiWrapper/src/1.daytimetcp/CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o"
   )
 SET(CMAKE_C_COMPILER_ID "GNU")
 

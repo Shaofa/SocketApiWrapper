@@ -1,0 +1,2 @@
+/home/lsf/SocketApiWrapper/src/2.shotback/build/CMakeFiles/client.dir
+/home/lsf/SocketApiWrapper/src/2.shotback/build/CMakeFiles/server.dir

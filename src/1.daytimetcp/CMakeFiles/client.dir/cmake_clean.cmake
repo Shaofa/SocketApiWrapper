@@ -1,6 +1,6 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/client.dir/client.c.o"
-  "CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o"
+  "CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o"
   "bin/client.pdb"
   "bin/client"
 )

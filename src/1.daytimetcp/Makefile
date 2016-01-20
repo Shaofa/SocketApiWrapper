@@ -148,32 +148,32 @@ client.c.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
 .PHONY : client.c.s
 
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.o: home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.o
+home/lsf/SocketApiWrapper/src/common/sockapi.o: home/lsf/SocketApiWrapper/src/common/sockapi.c.o
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.o
 
 # target to build an object file
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o
+home/lsf/SocketApiWrapper/src/common/sockapi.c.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.c.o
 
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.i: home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.i
+home/lsf/SocketApiWrapper/src/common/sockapi.i: home/lsf/SocketApiWrapper/src/common/sockapi.c.i
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.i
 
 # target to preprocess a source file
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.i
+home/lsf/SocketApiWrapper/src/common/sockapi.c.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.i
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.c.i
 
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.s: home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.s
+home/lsf/SocketApiWrapper/src/common/sockapi.s: home/lsf/SocketApiWrapper/src/common/sockapi.c.s
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.s
 
 # target to generate assembly for a file
-home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s
-	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s
-.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.s
+home/lsf/SocketApiWrapper/src/common/sockapi.c.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.s
+.PHONY : home/lsf/SocketApiWrapper/src/common/sockapi.c.s
 
 server.o: server.c.o
 .PHONY : server.o
@@ -212,9 +212,9 @@ help:
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
-	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.o"
-	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.i"
-	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.s"
+	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi.o"
+	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi.i"
+	@echo "... home/lsf/SocketApiWrapper/src/common/sockapi.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

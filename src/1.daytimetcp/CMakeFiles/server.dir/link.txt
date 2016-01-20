@@ -1,1 +1,1 @@
-/usr/bin/cc  -g    CMakeFiles/server.dir/server.c.o CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c.o  -o bin/server -rdynamic 
+/usr/bin/cc  -g    CMakeFiles/server.dir/server.c.o CMakeFiles/server.dir/home/lsf/SocketApiWrapper/src/common/sockapi.c.o  -o bin/server -rdynamic 

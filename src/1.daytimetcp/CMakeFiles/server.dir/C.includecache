@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../common/sockapi_wrapper.h
+../common/sockapi.h
 stdio.h
 -
 stdlib.h
@@ -23,28 +23,8 @@ errno.h
 -
 
 /home/lsf/SocketApiWrapper/src/1.daytimetcp/server.c
-sockapi_wrapper.h
-/home/lsf/SocketApiWrapper/src/1.daytimetcp/sockapi_wrapper.h
+sockapi.h
+/home/lsf/SocketApiWrapper/src/1.daytimetcp/sockapi.h
 time.h
--
-
-/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.c
-sockapi_wrapper.h
-/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.h
-
-/home/lsf/SocketApiWrapper/src/common/sockapi_wrapper.h
-stdio.h
--
-stdlib.h
--
-string.h
--
-sys/socket.h
--
-sys/types.h
--
-netinet/in.h
--
-errno.h
 -
 
