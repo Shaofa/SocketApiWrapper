@@ -7,7 +7,7 @@ int main(int argc, const char* argv[])
     struct sockaddr_in addrsvr;
     if(argc != 2)
     {
-        err_die("Usage: server <IP address>");
+        msg_die("Usage: server <IP address>");
     }
 
     sockfd = _socket(AF_INET, SOCK_STREAM, 0);
@@ -26,19 +26,18 @@ int main(int argc, const char* argv[])
         size_t n = 0;
         if(NULL != fgets(wtbuf, MAX_LINE_LEN, stdin))
         {
-            write(sockfd,wtbuf, strlen(wtbuf));
-            n = read(sockfd, rdbuf, MAX_LINE_LEN);
-            rdbuf[n] = '\0';
-            if(n < 0)
+            _write(sockfd,wtbuf, strlen(wtbuf));
+            bzero(rdbuf, MAX_LINE_LEN);
+            n = _read(sockfd, rdbuf, MAX_LINE_LEN);
+            if(n == 0 )
             {
-                errno_die("Socket read");
+                msg_die("server terminated!");
             }
             fputs(rdbuf, stdout);
         }
         else
         {
-            fprintf(stdout, "Bye!\n");
-            exit(0);
+            msg_die("Bye!");
         }
     }
     return 0;

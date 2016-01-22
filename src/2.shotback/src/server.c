@@ -1,8 +1,21 @@
+/*
+ * this program performs a tcp server,which shot back what
+ * client sent.this program accept clients' connect
+ * require and fork a child process to communicate with client, and
+ * the parent process continue to wait for other clients' require.
+ *
+ * server IP: local ip
+ * server port: 8888
+ *
+ * e-mail:  laishaofa@gmail.com
+ * date:    2016-01-20
+ * where:   NJUST
+ */
 #include "sockapi.h"
 #include "const.h"
 #include <signal.h>
 
-void sig_child(int signo)
+/*void sig_child(int signo)
 {
     pid_t pid;
     int state;
@@ -14,9 +27,26 @@ void sig_child(int signo)
     else if(WIFSTOPPED(state))
         fprintf(stdout, "Exit stopped,signo = %d\n", WSTOPSIG(state));
     return;
+}*/
+
+void sig_child(int signo)
+{
+    pid_t pid;
+    int stat;
+    while((pid = waitpid(-1,&stat, WNOHANG)) > 0)
+    {
+        fprintf(stdout, "child %d terminated!\n", pid);
+        if(WIFEXITED(stat))
+            fprintf(stdout, "Exit normally,code=%d\n", WEXITSTATUS(stat));
+        else if(WIFSIGNALED(stat))
+            fprintf(stdout, "Exit signaled,signo=%d\n", WTERMSIG(stat));
+        else if(WIFSTOPPED(stat))
+            fprintf(stdout, "Exit stopped,signo=%d\n", WSTOPSIG(stat));
+    }
+    return;
 }
-/*
-void sig_int(int signo)
+
+/*void sig_int(int signo)
 {
     pid_t pid;
     int stat;
@@ -27,17 +57,17 @@ void sig_int(int signo)
     else
     {
         int code = WEXITSTATUS(stat);
-        fprintf(stdout, "Exit code = %d\n", code);;
+        fprintf(stdout, "Exit code = %d\n", code);
     }
-}
-*/
+}*/
+
 int main(int argc, const char* argv[])
 {
     int listenfd,connfd;
     struct sockaddr_in addrsvr, addrcli;
     uint32_t addrlen = sizeof(struct sockaddr_in);
 
-    /* 1.socket */
+    /*1.socket */
     listenfd = _socket(AF_INET, SOCK_STREAM, 0);
 
     /* 2.bind */
@@ -51,7 +81,7 @@ int main(int argc, const char* argv[])
     _listen(listenfd, MAX_LISTEN_Q);
 
     signal(SIGCHLD, sig_child);
-    //signal(SIGINT, sig_int);
+    /*signal(SIGINT, sig_int);*/
     _server(listenfd);
 
     while(1)
@@ -61,9 +91,9 @@ int main(int argc, const char* argv[])
         if(connfd < 0)
         {
             if(errno == EINTR)
-                err_msg("EINTR");
+                msg_die("EINTR");
             else
-                err_msg("accept error");
+                msg_die("accept error");
             continue;
         }
         else
@@ -78,17 +108,17 @@ int main(int argc, const char* argv[])
                 char wtbuf[MAX_LINE_LEN] = {0};
                 char ipstr[32] = {0};
                 if (inet_ntop(AF_INET, &addrcli.sin_addr, ipstr, sizeof(ipstr)) == NULL)
-                    errno_die("inet_ntop");
+                    msg_die("inet_ntop");
 
                 fprintf(stdout, "client <%s:%d> connected!\n", ipstr, ntohs(addrcli.sin_port));
                 while(1)
                 {
                     memset(rdbuf, 0, MAX_LINE_LEN);
-                    uint32_t n = read(connfd, rdbuf, MAX_LINE_LEN);
+                    uint32_t n = _read(connfd, rdbuf, MAX_LINE_LEN);
                     if(n > 0)
                     {
                         fprintf(stdout, "<%s:%d>%s", ipstr, ntohs(addrcli.sin_port), rdbuf);
-                        write(connfd, rdbuf, n);
+                        _write(connfd, rdbuf, n);
                     }
                     else
                     {
