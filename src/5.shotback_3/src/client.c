@@ -30,16 +30,24 @@ int main(int argc, const char* argv[])
     }
 
     fd_set fdset;
-    int maxfd;
+    uint32_t maxfd;
     size_t n = 0;
     char *pt = NULL;
-    FD_ZERO(&fdset);
+    uint32_t isStdinEof = 0;
 
     while(1)
     {
-        FD_SET(fileno(stdin), &fdset);
+        FD_ZERO(&fdset);
         FD_SET(sockfd, &fdset);
-        maxfd = max(fileno(stdin), sockfd) + 1;
+        if(isStdinEof != 1)
+        {
+            FD_SET(fileno(stdin), &fdset);
+            maxfd = max(fileno(stdin), sockfd) + 1;
+        }
+        else
+        {
+            maxfd = sockfd + 1;
+        }
         ret = select(maxfd, &fdset, NULL, NULL, NULL);
         if(ret == -1)
         {
@@ -51,12 +59,18 @@ int main(int argc, const char* argv[])
         /*stdin is ready*/
         if( FD_ISSET(fileno(stdin), &fdset) )
         {
-            FD_CLR(fileno(stdin), &fdset);
             bzero(rdwrbuf,  MAX_LINE_LEN);
             pt = fgets(rdwrbuf, MAX_LINE_LEN, stdin);
             if(NULL == pt)
             {
-                msg_die("Bye!");
+                msg("input stopped!");
+                isStdinEof = 1;
+                ret = shutdown(sockfd, SHUT_WR);
+                if(ret == -1)
+                {
+                    msg_err_die("shutdown");
+                }
+                continue;
             }
             ret = write(sockfd, rdwrbuf, strlen(rdwrbuf));
             if(ret == -1)
@@ -68,7 +82,6 @@ int main(int argc, const char* argv[])
         /*sockfd is ready*/
         if( FD_ISSET(sockfd, &fdset) )
         {
-            FD_CLR(sockfd, &fdset);
             bzero(rdwrbuf, MAX_LINE_LEN);
             ret = read(sockfd, rdwrbuf, MAX_LINE_LEN);
             if(ret == -1)
@@ -77,7 +90,7 @@ int main(int argc, const char* argv[])
             }
             else if(ret == 0)
             {
-                msg_err_die("server terminated!");
+                msg_die("server terminated!");
             }
             fputs(rdwrbuf, stdout);
         }

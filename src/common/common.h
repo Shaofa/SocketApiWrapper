@@ -16,6 +16,25 @@
 #define     MAX_BUF_SIZE    (uint32_t)(1024)
 #define     MAX_LISTEN_Q    (uint32_t)(1)
 
+
+#define \
+    min(x, y)\
+    ({\
+        const typeof(x) _x = (x);\
+        const typeof(y) _y = (y);\
+        (void)(&_x==&_y);\
+        _x < _y ? _x : _y;\
+    })
+
+#define \
+    max(x, y)\
+    ({\
+        const typeof(x) _x = (x);\
+        const typeof(y) _y = (y);\
+        (void)(&_x==&_y);\
+        _x > _y ? _x : _y;\
+    })
+
 #define     STDOUT     stdout
 #define     msg(m)          fprintf(STDOUT, "%s\n", m)
 #define     msg_die(m)      do{ msg(m); exit(0);}while(0)
